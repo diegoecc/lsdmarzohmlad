@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user=scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+	<title>Usuarios por Minuto por Hora</title>
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="font-awesome.css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<ul class="tabs">
+			<li><a href="#tab1"><span class="fa fa-tachometer" aria-hidden="true"></span><span class="tab-text">Usuarios por Minuto por Hora - Lunes a Domingo</span></a></li>
+		</ul>
+
+		<div class ="secciones">
+
+			<article id = "tab1">
+			
+			<center><h1>Audiencia tvgo Live Perú de Lunes a Domingo - Marzo</h1></center>
+			
+			<br>
+			<br>
+
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   			<script type="text/javascript">
+      		google.charts.load('current', {'packages':['corechart']});
+      		google.charts.setOnLoadCallback(drawChart);
+
+      		function drawChart() {
+        	var data = google.visualization.arrayToDataTable([
+			['Hora','Desktop','App','MobileWeb'],
+			['00:00',939,1025,27],
+			['01:00',387,706,14],
+			['02:00',252,554,11],
+			['03:00',193,470,8],
+			['04:00',167,431,8],
+			['05:00',240,525,14],
+			['06:00',648,864,34],
+			['07:00',1284,1067,47],
+			['08:00',1759,1123,52],
+			['09:00',2121,1211,57],
+			['10:00',1899,1127,53],
+			['11:00',1765,1106,52],
+			['12:00',1811,1034,37],
+			['13:00',2432,1297,61],
+			['14:00',2643,1314,67],
+			['15:00',2347,1283,63],
+			['16:00',1802,1093,44],
+			['17:00',1846,1175,46],
+			['18:00',2599,1504,79],
+			['19:00',4883,2827,251],
+			['20:00',5996,3261,299],
+			['21:00',6255,3692,328],
+			['22:00',4640,3062,199],
+			['23:00',2139,1626,66]
+	        ]);
+
+	        var options = {
+	          title: 'PROMEDIO USUARIOS POR MINUTO POR HORA - PLATAFORMA',
+	          curveType: 'function',
+	          legend: { position: 'bottom left' }
+	        };
+
+		    var chart = new google.visualization.LineChart(document.getElementById('curve_chart1'));
+
+		    chart.draw(data, options);
+		    }
+		    </script>
+
+		    <div id="curve_chart1" style="width: automatic; height: automatic"></div>
+
+	<br>
+
+		    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script type="text/javascript">
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+
+		     function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+			['Hora','Total'],
+			['00:00',1992],
+			['01:00',1108],
+			['02:00',817],
+			['03:00',672],
+			['04:00',607],
+			['05:00',779],
+			['06:00',1547],
+			['07:00',2398],
+			['08:00',2934],
+			['09:00',3390],
+			['10:00',3079],
+			['11:00',2923],
+			['12:00',2882],
+			['13:00',3790],
+			['14:00',4024],
+			['15:00',3693],
+			['16:00',2938],
+			['17:00',3067],
+			['18:00',4183],
+			['19:00',7960],
+			['20:00',9556],
+			['21:00',10275],
+			['22:00',7901],
+			['23:00',3831]
+	        ]);
+
+		        var options = {
+		          title: 'PROMEDIO USUARIOS TOTALES POR MINUTO POR HORA',
+		        };
+
+		        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div2'));
+
+		        chart.draw(data, options);
+		     	 }
+		    	</script>
+
+		   		<div id="chart_div2" style="width: automatic; height: automatic;"></div>
+
+    <br>
+
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    		<script type="text/javascript">
+      		google.charts.load('current', {'packages':['corechart']});
+      		google.charts.setOnLoadCallback(drawChart);
+
+      		function drawChart() {
+        	var data = google.visualization.arrayToDataTable([
+			['Hora','Total'],
+			['00:00',4547],
+			['01:00',2462],
+			['02:00',1678],
+			['03:00',1107],
+			['04:00',956],
+			['05:00',1878],
+			['06:00',3774],
+			['07:00',4469],
+			['08:00',5149],
+			['09:00',5477],
+			['10:00',5831],
+			['11:00',8170],
+			['12:00',11454],
+			['13:00',13707],
+			['14:00',14051],
+			['15:00',18099],
+			['16:00',18819],
+			['17:00',8145],
+			['18:00',17892],
+			['19:00',19679],
+			['20:00',20896],
+			['21:00',23285],
+			['22:00',15513],
+			['23:00',8377],
+	        ]);
+
+        	var options = {
+          	 title: 'MAXIMO USUARIOS TOTALES POR MINUTO POR HORA',
+	          curveType: 'function',
+	          legend: { position: 'bottom left' }
+        	};
+
+        	var chart = new google.visualization.AreaChart(document.getElementById('chart_div3'));
+        	chart.draw(data, options);
+      		}
+    		</script>
+
+    		<div id="chart_div3" style="width: automatic; height: automatic;"></div>
+		    </article>
+		    <center>
+		</div>
+	</div>
+</body>
+</html>
